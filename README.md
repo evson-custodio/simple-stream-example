@@ -1,2 +1,2 @@
 # simple-stream-example
-Exemplo do uso de Stream de Imagens na Stack Javascript
+Example of using Stream Images in JavaScript Stack
