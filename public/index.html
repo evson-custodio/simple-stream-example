@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Simple-Stream-Example</title>
+        <script src="./js/StreamService.js"></script>
+        <style>
+            div {
+                margin: 1%;
+            }
+            table, th, td {
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Simple-Stream-Example</h1>
+        </header>
+        <main>
+            <div>
+                <span id="message" name="message"></span>
+            </div>
+            <div>
+                <input type="file" accept="image/png,image/jpg,image/jpeg" name="file" id="file" />
+                <button name="send" id="send" disabled="disabled">Send</button>
+            </div>
+            <div>
+                <label for="filenameOrId">Search:</label>
+                <input type="text" name="filenameOrId" id="filenameOrId" placeholder="Search by filename or id" />
+                <button name="search" id="search">Search</button>
+            </div>
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Filename</th>
+                            <th>Length</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody" name="tbody"></tbody>
+                </table>
+            </div>
+            <div>
+                <input type="image" id="image" name="image" src="./img/default.png" />
+            </div>
+        </main>
+        <footer>
+            <h5>Created by Évson Custódio</h5>
+        </footer>
+        <script src="./js/index.js"></script>
+    </body>
+</html>
