@@ -1,6 +1,6 @@
 {
   "name": "simple-stream-example",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Exemplo do uso de Stream de Imagens na Stack Javascript",
   "main": "server.js",
   "dependencies": {

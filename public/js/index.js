@@ -49,7 +49,8 @@ function searchFile() {
     stream.get(filenameOrId.value)
     .then(res => res.blob())
     .then(blob => {
-        image.src = URL.createObjectURL(blob);
+        image.innerHTML = '<img src="' + URL.createObjectURL(blob) + '" alt="' + filenameOrId.value + '" />';
+        // image.src = URL.createObjectURL(blob);
     })
     .catch(() => {
         message.textContent = 'File ' + filenameOrId.textContent + ' not found!';
