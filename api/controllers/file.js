@@ -27,12 +27,16 @@ module.exports = (api) => {
         },
         getById: (req, res) => {
             console.log('getById!');
+            res.append('Connection', 'keep-alive');
+            res.append('Transfer-Encoding', 'chunked');
             gfs.createReadStream({_id: req.id}).pipe(res)
             .on('finish', () => {
                 debug('File sent by id!');
             });
         },
         getByName: (req, res) => {
+            res.append('Connection', 'keep-alive');
+            res.append('Transfer-Encoding', 'chunked');
             gfs.createReadStream({filename: req.name}).pipe(res)
             .on('finish', () => {
                 debug('File sent by name!');

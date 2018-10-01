@@ -49,7 +49,12 @@ function searchFile() {
     stream.get(filenameOrId.value)
     .then(res => res.blob())
     .then(blob => {
-        image.innerHTML = '<img src="' + URL.createObjectURL(blob) + '" alt="' + filenameOrId.value + '" />';
+        image.innerHTML = '';
+        let img = document.createElement('img');
+        img.src = URL.createObjectURL(blob);
+        img.alt = filenameOrId.value;
+        image.appendChild(img);
+        // image.innerHTML = '<img src="' + URL.createObjectURL(blob) + '" alt="' + filenameOrId.value + '" />';
         // image.src = URL.createObjectURL(blob);
     })
     .catch(() => {
